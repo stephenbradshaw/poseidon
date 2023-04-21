@@ -110,6 +110,8 @@ class Poseidon(PayloadType):
                 command += "CC=o64-clang CXX=o64-clang++ "
             elif target_os == "windows":
                 command += "CC=x86_64-w64-mingw32-gcc "
+            if self.get_parameter("architecture") == "ARM_x64":
+                command += "CC=aarch64-linux-gnu-gcc-5 "
             # command += "export GOGARBLE=golang.org,github.com,howett.net;"
             # command += "export GOGARBLE=$GOGARBLE,vendor,net,internal,reflect,crypto,strings,math,compress,compress,syscall,os,unicode,context,regexp,sync,strconv,sort,fmt,bytes,path,bufio,log,mime,hash,container;"
             command += "GOGARBLE=* "

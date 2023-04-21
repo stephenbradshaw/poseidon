@@ -7,7 +7,7 @@ import (
 	"encoding/json"
 	"log"
 
-	"github.com/xorrior/keyctl"
+	"github.com/stephenbradshaw/keyctl"
 )
 
 //Keyresults - struct to hold array of keys
